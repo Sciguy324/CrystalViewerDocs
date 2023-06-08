@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Saving and Opening Files - Crystal Viewer Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Crystal Viewer Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Introduction</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Advanced Use <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Advanced%20Use/" class="dropdown-item">Advanced Use</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Adding Potentials</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Advanced%20Use/Adding%20Potentials/" class="dropdown-item">Adding Potentials</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Displacement Vectors</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Advanced%20Use/Displacement%20Vectors/" class="dropdown-item">Displacement Vectors</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Migration Paths</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Advanced%20Use/Migration%20Paths/" class="dropdown-item">Migration Paths</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Saving Potential Coefficients</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Advanced%20Use/Saving%20Potential%20Coefficients/" class="dropdown-item">Saving Potential Coefficients</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Site Energies</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Advanced%20Use/Site%20Energies/" class="dropdown-item">Site Energies</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Timelines</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Advanced%20Use/Timelines/" class="dropdown-item">Timelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Appearance <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Appearance/" class="dropdown-item">Appearance</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Atom Properties</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Appearance/Atom%20Properties/" class="dropdown-item">Atom Properties</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Rendering</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Appearance/Rendering/" class="dropdown-item">Rendering Settings</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Stylesheets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Appearance/Stylesheets/" class="dropdown-item">Stylesheets</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Basic Use <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Basic Use</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Modifying Atoms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Modifying%20Atoms/" class="dropdown-item">Modifying Atoms</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Navigation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Navigation/" class="dropdown-item">Navigation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Saving and Opening Files</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">Saving and Opening Files</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Selecting and Hiding Atoms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Selecting%20and%20Hiding%20Atoms/" class="dropdown-item">Selecting and Hiding Atoms</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Structures</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Structures/" class="dropdown-item">Structures</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Guides/" class="dropdown-item">Guides</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Annealing From Scratch</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Guides/Annealing%20From%20Scratch/" class="dropdown-item">Annealing From Scratch</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Generate NEB Simulations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Guides/Generate%20NEB%20Simulations/" class="dropdown-item">Generating NEB Simulations</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Simulations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Simulations/" class="dropdown-item">Simulations</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Annealing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Simulations/Annealing/" class="dropdown-item">Annealing</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Minimizing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Simulations/Minimizing/" class="dropdown-item">Minimizing</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">NEB</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Simulations/NEB/" class="dropdown-item">Nudged Elastic Band (NEB)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">PRD</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Simulations/PRD/" class="dropdown-item">Parallel Replica Dynamics (PRD)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Site Minimizer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Simulations/Site%20Minimizer/" class="dropdown-item">Vacancy Site Minimizer</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">TAD3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Simulations/TAD3/" class="dropdown-item">Temperature Accelerated Dynamics (TAD)</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Navigation/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Selecting%20and%20Hiding%20Atoms/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#saving-and-opening-files" class="nav-link">Saving and Opening Files</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#structure-files" class="nav-link">Structure Files</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#template-files" class="nav-link">Template Files</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#atom-lists" class="nav-link">Atom Lists</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#migration-paths" class="nav-link">Migration Paths</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#energy-barriers" class="nav-link">Energy Barriers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#site-energies" class="nav-link">Site Energies</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="saving-and-opening-files">Saving and Opening Files</h1>
+<p>There are several types of files you may need to work with when using this program. 
+These include:</p>
+<ul>
+<li><a href="#structure-files">Structure Files</a></li>
+<li><a href="#template-files">Template Files</a></li>
+<li><a href="#atom-lists">Atom Lists</a></li>
+<li><a href="#migration-paths">Migration Paths</a></li>
+<li><a href="#site-energies">Site Energies</a></li>
+</ul>
+<hr />
+<h2 id="structure-files">Structure Files</h2>
+<p>Structure files contain raw atomic data.  They may be loaded from either the menu bar or the 
+"Load Structure File" box:</p>
+<p><img alt="Load structure from menu bar" src="menuStructure.png" /> <img alt="Load structure button" src="structureSelector.png" /></p>
+<p>The following file formats are supported: </p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.xyz</td>
+<td>A simple table of atomic coordinates.  More info on specification can be found <a href="https://www.cgl.ucsf.edu/chimera/docs/UsersGuide/xyz.html">here</a></td>
+</tr>
+<tr>
+<td>LAMMPS .dat</td>
+<td>Data file format used by LAMMPS.  More info on specifications can be found <a href="https://docs.lammps.org/read_data.html">here</a></td>
+</tr>
+<tr>
+<td>TAD3 .dat</td>
+<td>Data file format used by the TAD3 simulator.</td>
+</tr>
+</tbody>
+</table>
+<p>It is worth noting that the program can import some types of information from a <code>.xyz</code> 
+file's comment line (second line of the file).  Any such information is expected to take the 
+format of comma-separated key: value pairs. For example:</p>
+<pre><code>Foo: 10, Bar: -0.12
+</code></pre>
+<p>Currently, the only information that will be read is <a href="../Structures/#bounding-box">bounding box</a> 
+information. The expected format for this takes the form:</p>
+<pre><code>xlo: -40.2, xhi: 57.5, ylo: -1.0, yhi: 53.7, zlo: -1.0, zhi: 53.7
+</code></pre>
+<p>Finally, the program supports loading multiple structures from a single <code>.xyz</code> file. When 
+doing so, they will be loaded in <a href="../../Advanced Use/Timelines/#opening-in-timeline-mode">timeline</a> mode. In such cases, it is expected that the 
+structures are simply concatenated together in the <code>.xyz</code> file.</p>
+<hr />
+<h2 id="template-files">Template Files</h2>
+<p>Template files contain the complete internal state of a structure. This includes atomic 
+data, migration paths/barriers, atom selections, atom visibilities, and more. They are stored 
+as gzip-compressed JSON tags of key-value pairs. They may be loaded from either the menu bar 
+or the "Load Template File" box:</p>
+<p><img alt="Load template from menu bar" src="menuTemplate.png" /> <img alt="Load template button" src="templateSelector.png" /></p>
+<p>The following file formats are supported:</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.gz</td>
+<td>gzipped-compressed JSON file</td>
+</tr>
+<tr>
+<td>.json</td>
+<td>Uncompressed JSON file</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="atom-lists">Atom Lists</h2>
+<p>Atom list files are used to select groups of atoms from a given list. The files are formatted 
+as a list of integers corresponding to atom ids. They may be loaded from either the menu bar 
+or the "Select Atoms From File" box:</p>
+<p><img alt="Load atom list from menu bar" src="menuAtomList.png" /> <img alt="Load atom list button" src="atomListSelector.png" /></p>
+<hr />
+<h2 id="migration-paths">Migration Paths</h2>
+<p>Migration path files describe possible jumps between pairs of atoms. They can be saved and 
+loaded from the "Migration Paths" panel:</p>
+<p><img alt="Load migration paths from file button" src="pathsSelector.png" /> <img alt="Save migration paths to file button" src="pathsSave.png" /></p>
+<p>Migration path files are formatted as <code>.csv</code> files, and contain two or three columns:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First</td>
+<td>ID of moving atom</td>
+</tr>
+<tr>
+<td>Second</td>
+<td>Uncompressed JSON file</td>
+</tr>
+<tr>
+<td>Boundary Crossing Flags</td>
+<td>Optional. See below.</td>
+</tr>
+</tbody>
+</table>
+<p>The boundary flags, if provided, describe what periodic boundaries a path crosses. 
+They are represented as a base-10 version of a binary number. Each bit in the binary 
+representation corresponds to a boundary that the path crosses.</p>
+<table align=center class="boundaryTable">
+    <tr>
+        <td bgcolor=#DDDDFF align=center width=40>-Z</td>
+        <td bgcolor=#DDDDFF align=center width=40>+Z</td>
+        <td bgcolor=#DDDDFF align=center width=40>-Y</td>
+        <td bgcolor=#DDDDFF align=center width=40>+Y</td>
+        <td bgcolor=#DDDDFF align=center width=40>-X</td>
+        <td bgcolor=#DDDDFF align=center width=40>+X</td>
+    </tr>
+    <tr>
+        <td bgcolor=#FFFFDD align=center width=40>1</td>
+        <td bgcolor=#FFFFDD align=center width=40>0</td>
+        <td bgcolor=#FFFFDD align=center width=40>0</td>
+        <td bgcolor=#FFFFDD align=center width=40>1</td>
+        <td bgcolor=#FFFFDD align=center width=40>0</td>
+        <td bgcolor=#FFFFDD align=center width=40>0</td>
+    </tr>
+    <tr>
+        <td align=center width=40>32</td>
+        <td align=center width=40>16</td>
+        <td align=center width=40>8</td>
+        <td align=center width=40>4</td>
+        <td align=center width=40>2</td>
+        <td align=center width=40>1</td>
+    </tr>
+    <tr>
+        <td bgcolor=#F2F2F2 colspan=6>Sum</td>
+    </tr>
+</table>
+
+<p>For example, a path that crosses the +X and +Y boundaries would have a flag of 1 + 4 = <strong>5</strong>:</p>
+<table align=center class="boundaryTable">
+    <tr>
+        <td bgcolor=#DDDDFF align=center width=40>-Z</td>
+        <td bgcolor=#DDDDFF align=center width=40>+Z</td>
+        <td bgcolor=#DDDDFF align=center width=40>-Y</td>
+        <td bgcolor=#DDDDFF align=center width=40>+Y</td>
+        <td bgcolor=#DDDDFF align=center width=40>-X</td>
+        <td bgcolor=#DDDDFF align=center width=40>+X</td>
+    </tr>
+    <tr>
+        <td bgcolor=#FFFFDD align=center width=40 style="color: red;">&#x2717;</td>
+        <td bgcolor=#FFFFDD align=center width=40 style="color: red;">&#x2717;</td>
+        <td bgcolor=#FFFFDD align=center width=40 style="color: red;">&#x2717;</td>
+        <td bgcolor=#FFFFDD align=center width=40 style="color: green;">&#x2713;</td>
+        <td bgcolor=#FFFFDD align=center width=40 style="color: red;">&#x2717;</td>
+        <td bgcolor=#FFFFDD align=center width=40 style="color: green;">&#x2713;</td>
+    </tr>
+    <tr>
+        <td align=center width=40>32</td>
+        <td align=center width=40>16</td>
+        <td align=center width=40>8</td>
+        <td align=center width=40>4</td>
+        <td align=center width=40>2</td>
+        <td align=center width=40>1</td>
+    </tr>
+    <tr>
+        <td bgcolor=#F2F2F2 colspan=6>Sum: 4+1=5</td>
+    </tr>
+</table>
+
+<p>As an example of what a migration paths file looks like:</p>
+<pre><code class="language-plaintext">First, Second, Boundary Flags
+1, 3, 0
+2, 4, 1
+</code></pre>
+<hr />
+<h2 id="energy-barriers">Energy Barriers</h2>
+<p>An energy barrier file describes the computed energy barriers between pairs of atoms. They 
+are generated from an <a href="../../Simulations/NEB/">NEB simulation</a>, and can be loaded from the same location as 
+<a href="#migration-paths">migration paths</a>:</p>
+<p><img alt="Load energy barriers from file button" src="pathsSelector.png" /></p>
+<p>Their format is similar to that of migration paths, albeit with a few additional fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moving Atom ID</td>
+<td>ID of moving atom</td>
+</tr>
+<tr>
+<td>Vacant Atom ID</td>
+<td>Atom ID that was converted to vacancy</td>
+</tr>
+<tr>
+<td>Energy</td>
+<td>Energy barrier of this path</td>
+</tr>
+<tr>
+<td>Starting Vacancy ID</td>
+<td>See <a href="../Modifying Atoms/#mark-as-starting-vacancy">here</a></td>
+</tr>
+<tr>
+<td>Boundary Crossing Flags</td>
+<td>See above</td>
+</tr>
+</tbody>
+</table>
+<p>As an example of what an energy barriers file looks like:</p>
+<pre><code class="language-plaintext">Moving Atom ID, Vacant Atom ID, Starting Vacancy ID, Energy Barrier, Boundary Flags
+9666, 11024, 20282, 8.76, 0
+11024, 9666, 20282, 8.77, 0
+</code></pre>
+<hr />
+<h2 id="site-energies">Site Energies</h2>
+<p>A site energy file describes some computed energy associated with atoms in a structure. 
+For example, it may describe the energy associated with creating a vacancy at a given 
+position.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Site</td>
+<td>Atom ID</td>
+</tr>
+<tr>
+<td>Energy</td>
+<td>Energy associated with the atom</td>
+</tr>
+</tbody>
+</table>
+<p>As an example of what an energy barriers file looks like:</p>
+<pre><code class="language-plaintext">Site, Energy
+1, 1.0
+2, 1.5
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Annealing From Scratch - Crystal Viewer Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Crystal Viewer Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Introduction</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Advanced Use <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Advanced%20Use/" class="dropdown-item">Advanced Use</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Adding Potentials</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Advanced%20Use/Adding%20Potentials/" class="dropdown-item">Adding Potentials</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Displacement Vectors</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Advanced%20Use/Displacement%20Vectors/" class="dropdown-item">Displacement Vectors</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Migration Paths</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Advanced%20Use/Migration%20Paths/" class="dropdown-item">Migration Paths</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Saving Potential Coefficients</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Advanced%20Use/Saving%20Potential%20Coefficients/" class="dropdown-item">Saving Potential Coefficients</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Site Energies</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Advanced%20Use/Site%20Energies/" class="dropdown-item">Site Energies</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Timelines</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Advanced%20Use/Timelines/" class="dropdown-item">Timelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Appearance <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Appearance/" class="dropdown-item">Appearance</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Atom Properties</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Appearance/Atom%20Properties/" class="dropdown-item">Atom Properties</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Rendering</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Appearance/Rendering/" class="dropdown-item">Rendering Settings</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Stylesheets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Appearance/Stylesheets/" class="dropdown-item">Stylesheets</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Basic Use <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Basic%20Use/" class="dropdown-item">Basic Use</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Modifying Atoms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Basic%20Use/Modifying%20Atoms/" class="dropdown-item">Modifying Atoms</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Navigation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Basic%20Use/Navigation/" class="dropdown-item">Navigation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Saving and Opening Files</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Basic%20Use/Saving%20and%20Opening%20Files/" class="dropdown-item">Saving and Opening Files</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Selecting and Hiding Atoms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Basic%20Use/Selecting%20and%20Hiding%20Atoms/" class="dropdown-item">Selecting and Hiding Atoms</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Structures</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Basic%20Use/Structures/" class="dropdown-item">Structures</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Guides</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Annealing From Scratch</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">Annealing From Scratch</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Generate NEB Simulations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Generate%20NEB%20Simulations/" class="dropdown-item">Generating NEB Simulations</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Simulations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Simulations/" class="dropdown-item">Simulations</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Annealing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Simulations/Annealing/" class="dropdown-item">Annealing</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Minimizing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Simulations/Minimizing/" class="dropdown-item">Minimizing</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">NEB</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Simulations/NEB/" class="dropdown-item">Nudged Elastic Band (NEB)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">PRD</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Simulations/PRD/" class="dropdown-item">Parallel Replica Dynamics (PRD)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Site Minimizer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Simulations/Site%20Minimizer/" class="dropdown-item">Vacancy Site Minimizer</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">TAD3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Simulations/TAD3/" class="dropdown-item">Temperature Accelerated Dynamics (TAD)</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Generate%20NEB%20Simulations/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#annealing-from-scratch" class="nav-link">Annealing From Scratch</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#1-import-structure" class="nav-link">1) Import Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#2-generate-minimizer" class="nav-link">2) Generate Minimizer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#3-run-the-minimizer" class="nav-link">3) Run the Minimizer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#4-generate-annealer" class="nav-link">4) Generate Annealer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#5-run-the-annealer" class="nav-link">5) Run the Annealer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="annealing-from-scratch">Annealing From Scratch</h1>
+<p>This section will guide you through annealing a structure from 
+scratch. For this, the basic steps are:</p>
+<ol>
+<li><a href="#1-import-structure">Import Structure</a></li>
+<li><a href="#2-generate-minimizer">Generate Minimizer</a></li>
+<li><a href="#3-run-the-minimizer">Run the Minimizer</a></li>
+<li><a href="#4-generate-annealer">Generate Annealer</a></li>
+<li><a href="#5-run-the-annealer">Run the Annealer</a></li>
+</ol>
+<table align=center class="info" width=75% style="border: 2px solid #5757E0; background-color: #E0E0FF;">
+    <tr><td>
+        <span style="font-weight: bold;">Note:</span> this program is not designed to <i>create</i> structures.  You must
+        already have a structure ahead of time!
+    </td></tr>
+</table>
+<hr />
+<h2 id="1-import-structure">1) Import Structure</h2>
+<p>Load your <a href="../../Basic Use/Saving and Opening Files/#structure-files">structure</a> into the program:</p>
+<p><img alt="Load structure from menu bar" src="menuStructure.png" /> <img alt="Load structure from panel" src="structureSelector.png" /></p>
+<p>You should now see the structure in the viewport:</p>
+<p><img alt="Example of structure loaded in the viewport" src="structureLoaded.png" /></p>
+<hr />
+<h2 id="2-generate-minimizer">2) Generate Minimizer</h2>
+<p>Go to <code>Simulation &gt; Generate Simulation</code> to launch the 
+<a href="../../Simulations/">simulation generator dialog</a>:</p>
+<p><img alt="Menu bar button for launching the simulation builder dialog" src="gotoGenerate.png" /></p>
+<p>Switch to the <a href="../../Simulations/Minimizing/">minimizer</a> simulation:</p>
+<p><img alt="Minimizer tab in the simulation builder dialog" src="clickMinimize.png" /></p>
+<p>Enter parameters for your simulation. An explanation of all the 
+fields can be found <a href="../../Simulations/Minimizing/">here</a>. Once 
+ready, click "Ok" to generate.</p>
+<hr />
+<h2 id="3-run-the-minimizer">3) Run the Minimizer</h2>
+<p>Upload the resulting files to your cluster using the method of 
+your choice (<a href="https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/">scp</a>, 
+<a href="https://filezilla-project.org/">FileZilla</a>, etc.)</p>
+<p>To run the simulation, navigate to the directory containing your 
+simulation files and run the command:</p>
+<pre><code class="language-shell">sbatch slurm-mpi-main.sh
+</code></pre>
+<p>The minimizer may require some time to run. Once it's finished, you 
+can retrieve the resulting structure from <code>/logs/[NAME]-min.dat</code></p>
+<hr />
+<h2 id="4-generate-annealer">4) Generate Annealer</h2>
+<p>First, load the newly minimized structure back into the program. 
+Since you're loading a LAMMPS <code>.dat</code> file, the program may prompt 
+you to match the numeric IDs in the file with their symbols:</p>
+<p><img alt="The element id matching dialog" src="matchElement.png" /></p>
+<p>If you do not know which IDs correspond to which element, locate 
+the <code>[NAME].dat</code> structure file in the <code>Assets</code> folder of the 
+minimizer. The Masses section should list the element with a 
+comment:</p>
+<p><img alt="Screenshot of the masses table in a LAMMPS data file" src="ids.png" /></p>
+<p>Next, go to <code>Simulation &gt; Generate Simulation</code> to launch the 
+simulation generator dialog as before:</p>
+<p><img alt="Menu bar button for launching the simulation builder dialog" src="gotoGenerate.png" /></p>
+<p>Switch to the annealer simulation:</p>
+<p><img alt="Annealer tab in the simulation builder dialog" src="clickAnneal.png" /></p>
+<p>Enter parameters for your simulation. An explanation of all the 
+fields can be found <a href="../../Simulations/Annealing">here</a>. Once ready, 
+click "Ok" to generate.</p>
+<hr />
+<h2 id="5-run-the-annealer">5) Run the Annealer</h2>
+<p>Upload the resulting files to your cluster using the method of your 
+choice (<a href="https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/">scp</a>, 
+<a href="https://filezilla-project.org/">FileZilla</a>, etc.)</p>
+<p>To run the simulation, navigate to the directory containing your 
+simulation files and run the command:</p>
+<pre><code class="language-shell">sbatch slurm-mpi-main.sh
+</code></pre>
+<p>The annealer may require some time to run. Once it's finished, you 
+can retrieve the resulting structure from <code>/logs/[NAME]-anneal.dat</code></p>
+<p><br /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Simulations - Crystal Viewer Documentation</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Crystal Viewer Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Introduction</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Advanced Use <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Advanced%20Use/" class="dropdown-item">Advanced Use</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Adding Potentials</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Advanced%20Use/Adding%20Potentials/" class="dropdown-item">Adding Potentials</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Displacement Vectors</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Advanced%20Use/Displacement%20Vectors/" class="dropdown-item">Displacement Vectors</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Migration Paths</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Advanced%20Use/Migration%20Paths/" class="dropdown-item">Migration Paths</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Saving Potential Coefficients</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Advanced%20Use/Saving%20Potential%20Coefficients/" class="dropdown-item">Saving Potential Coefficients</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Site Energies</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Advanced%20Use/Site%20Energies/" class="dropdown-item">Site Energies</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Timelines</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Advanced%20Use/Timelines/" class="dropdown-item">Timelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Appearance <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Appearance/" class="dropdown-item">Appearance</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Atom Properties</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Appearance/Atom%20Properties/" class="dropdown-item">Atom Properties</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Rendering</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Appearance/Rendering/" class="dropdown-item">Rendering Settings</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Stylesheets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Appearance/Stylesheets/" class="dropdown-item">Stylesheets</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Basic Use <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Basic%20Use/" class="dropdown-item">Basic Use</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Modifying Atoms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Basic%20Use/Modifying%20Atoms/" class="dropdown-item">Modifying Atoms</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Navigation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Basic%20Use/Navigation/" class="dropdown-item">Navigation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Saving and Opening Files</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Basic%20Use/Saving%20and%20Opening%20Files/" class="dropdown-item">Saving and Opening Files</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Selecting and Hiding Atoms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Basic%20Use/Selecting%20and%20Hiding%20Atoms/" class="dropdown-item">Selecting and Hiding Atoms</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Structures</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Basic%20Use/Structures/" class="dropdown-item">Structures</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Guides/" class="dropdown-item">Guides</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Annealing From Scratch</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Guides/Annealing%20From%20Scratch/" class="dropdown-item">Annealing From Scratch</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Generate NEB Simulations</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Guides/Generate%20NEB%20Simulations/" class="dropdown-item">Generating NEB Simulations</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Simulations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Simulations</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Annealing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="Annealing/" class="dropdown-item">Annealing</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Minimizing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="Minimizing/" class="dropdown-item">Minimizing</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">NEB</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="NEB/" class="dropdown-item">Nudged Elastic Band (NEB)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">PRD</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="PRD/" class="dropdown-item">Parallel Replica Dynamics (PRD)</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Site Minimizer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="Site%20Minimizer/" class="dropdown-item">Vacancy Site Minimizer</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">TAD3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="TAD3/" class="dropdown-item">Temperature Accelerated Dynamics (TAD)</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Guides/Generate%20NEB%20Simulations/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="Annealing/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#simulations" class="nav-link">Simulations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="simulations">Simulations</h1>
+<p>One of the primary features of the program is the ability to 
+rapidly set up and generate simulations. Aside from <a href="TAD3/">TAD3</a>, 
+these simulators are designed for <a href="https://www.lammps.org/">LAMMPS</a>, 
+with the <a href="https://slurm.schedmd.com/">slurm</a> workload manager to 
+schedule jobs.</p>
+<p>To access the simulation generator dialog, go to 
+<code>Simulations &gt; Generate Simulation</code>:</p>
+<p><img alt="Menu bar button for launching the simulation builder dialog" src="menu.png" /></p>
+<p>Here, you will be met with a dialog containing options for various 
+built-in simulations:</p>
+<p><img alt="Simulation builder dialog" src="dialog.png" /></p>
+<p>In this dialog, the following simulators are offered:</p>
+<ul>
+<li><a href="Minimizing/">Structure Minimizer</a></li>
+<li><a href="Annealing/">Annealer</a></li>
+<li><a href="NEB/">Nudged Elastic Band (NEB)</a></li>
+<li><a href="PRD/">Parallel Replica Dynamics (PRD)</a></li>
+<li><a href="TAD3/">Temperature Accelerated Dynamics (TAD)</a></li>
+<li><a href="Site Minimizer/">Site Vacancy Minimizer</a></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
