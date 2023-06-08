@@ -143,11 +143,17 @@ issues or the cluster having a bad day—will be logged to
 `/Missing Barriers/Missing.csv`. This can be loaded back into the 
 viewer as ordinary [migration paths](../../Basic Use/Saving and Opening Files/#migration-paths).
 
+---
+
 ## 6) Viewing Computed Barriers
 
 Once all jobs have finished, download the completed 
 [barriers file](../../Basic Use/Saving and Opening Files/#energy-barriers) 
-from `/Compiled Energy Barriers/[NAME] Barriers.csv`.
+from `/Compiled Energy Barriers/[NAME] Barriers.csv`. Additionally, 
+any barriers that failed to compute—whether from failing to 
+converge or from job time limits—will be saved to 
+`/Missing Barriers/Missing.csv`. You may want to check/download this 
+file in case any such issues occurred.
 
 Then, load your structure back in. For convenience, a template file 
 (named `template.gz`) was automatically added to the simulation 
