@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				line-height: 1.2;
+				background-color: white;
+				color: black;
+			}
+			
+			h1 {
+				color: darkblue;
+				margin-bottom: 0;
+				line-height: 1.0;
+			}
+			h1 span {
+				font-size: 24pt;
+			}
+			
+			h2 {
+				color: darkred;
+				margin-bottom: 0;
+				font-size: 18pt;
+				line-height: 1.0;
+			}
+			
+			p {
+				font-size: 12pt;
+			}
+			ul {
+				font-size: 12pt;
+			}
+			
+			a {
+				color: blue;
+			}
+			
+			td {
+				font-size: 12pt;
+				padding: 5px;
+			}
+			th {
+				font-size: 14pt;
+				padding: 5px;
+			}
+			
+			table.images tr td {
+				padding: 10px;
+				background-color: white;
+				border: 1px solid #DDDDDD;
+			}
+			
+			p.images {
+				line-height: 1.0;
+			}
+			
+		</style>
+	</head>
+	<body>
+	
+	<div id="Overview">
+		<h1><span>Selecting and Hiding Atoms</span></h1>
+		<hr />
+		<p>
+			This program includes tools for selecting groups of atoms, as well as hiding 
+			selected atoms.  Atom selections allow you to apply changes to only a particular
+			subset of atoms.  Additionally, the visibility tools allow you to view these 
+			groups in isolation, without unintentionally modifying the rest of the structure.
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="selectionTools.png" /></p></td>
+			</tr>
+		</table>
+		<br>
+	</div>
+	
+	<div id="Basic Selection Tools">
+		<h2>Basic Tools</h2><hr />
+		<p>
+			On the left pane, several tools are available for creating selections
+		</p>
+		<table align=center>
+			<tr align=center>
+				<th bgcolor="#DDDDDD">Tool</th>
+				<th bgcolor="#DDDDDD">Description</th>
+			</tr>
+			<tr>
+				<td bgcolor="#DDDDDD">Hide Selected</td>
+				<td bgcolor="#DDDDDD">Hides the currently selected atoms.</td>
+			</tr>
+			<tr>
+				<td bgcolor="#F5F5F5">Unhide All</td>
+				<td bgcolor="#F5F5F5">Renders all atoms visible.</td>
+			</tr>
+			<tr>
+				<td bgcolor="#DDDDDD">Select Type</td>
+				<td bgcolor="#DDDDDD"><p>Selects all atoms of some type.  Use dropdown to select type.  Holding down shift will remove atoms from the selection.</p></td>
+			</tr>
+			<tr>
+				<td bgcolor="#F5F5F5">Invert Selection</td>
+				<td bgcolor="#F5F5F5">Inverts the selection status of all atoms.</td>
+			</tr>
+			<tr>
+				<td bgcolor="#DDDDDD">Deselect All</td>
+				<td bgcolor="#DDDDDD">Removes all atoms from the selection.</td>
+			</tr>
+		</table>
+		<br />
+		<p>
+			Additionally, atoms can be selected/deselected in the viewport using the "Box Select" tool.
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="boxSelectTool.png" /></p></td>
+			</tr>
+		</table>
+		<br />
+		<p>
+			Once active, click and drag to select all atoms within a box, or click on
+			individual atoms to select them individually.
+			Holding down shift will <i>remove</i> atoms from the selection, instead of 
+			adding them.
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="selectionExample.png" /></p></td>
+				<td><p class="images"><img src="selectionExample2.png" /></p></td>
+			</tr>
+		</table>
+		<br />
+	</div>
+	
+	<div id="Selection List">
+		<h2>Selection List</h2><hr />
+		<p>
+			To manually select or hide/show atoms, an atom list is included below the 
+			selection tools.  Here, you can manually locate an atom by its ID, and use 
+			the checkboxes to toggle its properties:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="selectionList.png" /></p></td>
+			</tr>
+		</table>
+		<br />
+	</div>
+	
+	<div id="Selections In Timeline Mode">
+		<h2>Selections In Timeline Mode</h2><hr />
+		<p>
+			When multiple structures are loaded at once (see 
+			<a href="../../Advanced Use/Timelines/index.html">timeline mode</a>) selecting atoms behaves
+			slightly different.
+		</p>
+		<p>
+			Firstly, the <a href="index.html#Selection List">selection list</a> is disabled 
+			in timeline mode for performance reasons:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="disabledList.png" /></p></td>
+			</tr>
+		</table>
+		<p>
+			Secondly, you will need to choose whether changes to selections/visibility 
+			affect the entire timeline, or just the current structure in the timeline.  
+			To switch between these modes, use the "Apply To" dropdown:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="timelineApplyMode.png" /></p></td>
+			</tr>
+		</table>
+		<br />
+	</div>
+
+	</body>
+</html> 

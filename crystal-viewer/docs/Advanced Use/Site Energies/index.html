@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				line-height: 1.2;
+				background-color: white;
+				color: black;
+			}
+			
+			h1 {
+				color: darkblue;
+				margin-bottom: 0;
+				line-height: 1.0;
+			}
+			h1 span {
+				font-size: 24pt;
+			}
+			
+			h2 {
+				color: darkred;
+				margin-bottom: 0;
+				font-size: 18pt;
+				line-height: 1.0;
+			}
+			
+			p {
+				font-size: 12pt;
+			}
+			ul {
+				font-size: 12pt;
+			}
+			
+			a {
+				color: blue;
+			}
+			
+			td {
+				font-size: 12pt;
+				padding: 5px;
+			}
+			th {
+				font-size: 14pt;
+				padding: 5px;
+			}
+			
+			table.images tr td {
+				padding: 10px;
+				background-color: white;
+				border: 1px solid #DDDDDD;
+			}
+			
+			p.images {
+				line-height: 1.0;
+			}
+			
+		</style>
+	</head>
+	<body>
+	
+	<div>
+		<h1>Site Energies</h1><hr />
+		<p>
+			This program supports coloring atoms by some energy value.  This is especially 
+			useful for viewing the results of a 
+			<a href="../../Simulations/Site Minimizer/index.html">site minimizer</a> 
+			simulation.  To access it, simply open a CSV file using the "Site Energies" pane 
+			on the right side:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="menu.png" /></p></td>
+			</tr>
+		</table><br />
+		<p>
+			Once opened, atoms referenced in the file will be colored by their energy in the 
+			viewport.  They are colored with the viridis colormap, and the scale can be 
+			adjusted using the energy bar on the right of the viewport.
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="example.png" /></p></td>
+			</tr>
+		</table><br />
+		<p>
+			To clear site energies from the viewport, simply click the "Clear Site Energies" button.
+		</p>
+		<p>
+			A description of the expected file format for site energy files can be found 
+			<a href="../../Basic Use/Saving and Opening Files/index.html#Site Energies">here</a>.
+		</p>
+	</div><br />
+	</body>
+</html> 

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				line-height: 1.2;
+				background-color: white;
+				color: black;
+			}
+			
+			h1 {
+				color: darkblue;
+				margin-bottom: 0;
+				line-height: 1.0;
+			}
+			h1 span {
+				font-size: 24pt;
+			}
+			
+			h2 {
+				color: darkred;
+				margin-bottom: 0;
+				font-size: 18pt;
+				line-height: 1.0;
+			}
+			
+			p {
+				font-size: 12pt;
+				<!-- text-indent: 25px; -->
+			}
+			
+			ul {
+				font-size: 12pt;
+			}
+			
+			a {
+				color: blue;
+			}
+			
+			td {
+				font-size: 12pt;
+				padding: 5px;
+			}
+			th {
+				font-size: 14pt;
+				padding: 5px;
+			}
+			
+			table.images tr td {
+				padding: 10px;
+				border: 1px solid #DDDDDD;
+			}
+			
+			table.codeblock {
+				margin-bottom: 10px;
+			}
+			table.codeblock tr td {
+				padding: 20px;
+				background-color: #DDDDDD;
+			}
+			
+			p.images {
+				line-height: 1.0;
+			}
+			
+		</style>
+	</head>
+	<body>
+	
+	<div id="Overview">
+		<h1><span>Structures</span></h1>
+		<hr />
+		<p>
+			This program provides basic tools for viewing and preparing structures for use in 
+			simulations.
+		</p>
+		<p>
+			However, it must be noted that this program is not intended for <i>creating</i> 
+			crystals.  As such, you will need to generate crystals using an external program 
+			such as <a href="https://jp-minerals.org/vesta/en/">Vesta</a>.  You will then 
+			need to export it as an <code>.xyz</code> file (or other compatible file) for 
+			use here.
+		</p>
+		<br>
+	</div>
+	
+	<div id="Viewing Structure Properties">
+		<h2>Viewing Structure Properties</h2><hr />
+		<p>
+			The structure properties dialog allows you to view basic information about the
+			currently opened structure:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="structurePropertiesDialog.png" /></p></td>
+			</tr>
+		</table>
+		<br />
+		<p>
+			It can be accessed under <code>Info > Structure Properties</code>:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="structureProperties.png" /></p></td>
+			</tr>
+		</table>
+		<br />
+	</div>
+	
+	<div id="Bounding Box">
+		<h2>Bounding Box</h2><hr />
+		<p>
+			The bounding box represents the extent of your structure cell.  In the viewport, 
+			it is visible as a thin, white line:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="bounds.png" /></p></td>
+			</tr>
+		</table>
+		<br />
+		<p>
+			Besides being viewable in the 
+			<a href="index.html#Viewing Structure Properties">properties viewer</a>, the 
+			bounding box can be configured using the "Configure Structure Bounds" dialog.
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td width=400>
+					<p>
+					This dialog has three options for setting the bounding box.  Firstly, you 
+					can set the bounds manually using the line edit fields.
+					</p>
+					<br />
+					<p>
+					Secondly, the "Tight Fit" button automatically sets the bounds to the 
+					minimum required to encompass the structure.
+					</p>
+					<br />
+					<p>
+					Finally, the "Estimate With Periodic Spacing" button attempts to set the 
+					bounds in a way that preserves the lattice spacing between atoms.  This 
+					usually gets within a few units of the ideal spacing, and is a good 
+					starting point when setting up for a <a href="../../Simulations/Minimizing/index.html">minimizer</a>.
+					</p>
+				</td>
+				<td><p class="images"><img src="configureBoundsDialog.png" /></p></td>
+			</tr>
+		</table>
+		<br />
+		<p>
+			To access this dialog, simply go to <code>Structure > Configure Bounds</code>:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="configureBounds.png" /></p></td>
+			</tr>
+		</table>
+		<br />
+		<p>
+			Finally, if the source file already contains bounding box information, a 
+			structure's bounding box will be initialized to that.  Reading from an <code>
+			.xyz</code> file's comment line is also supported, as explained 
+			<a href="../Saving and Opening Files/index.html#Structures">here</a>.
+		</p>
+		<br />
+	</div>
+	
+	<div id="Comparing Structures">
+		<h2>Comparing Structures</h2><hr />
+		<p>
+			The program includes support for visually comparing two structures with the 
+			"Compare Structures" dialog.  This dialog contains two minimal viewers for 
+			comparing two structures.
+		</p>
+		<p>
+			To use it, simply click the "From Current" button, and the state of the current 
+			structure in the viewport will be copied over to the corresponding window.  
+			Alternatively, you can load a structure directly from a file with the dropdown.
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td align=center><p class="images"><img src="compareStructuresDialog.png" /></p></td>
+			</tr>
+		</table>
+		<br />
+		<p>
+			The dialog can be accessed under <code>Structure > Compare Structures</code>:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="compareStructures.png" /></p></td>
+			</tr>
+		</table>
+		<br />
+	</div>
+
+	</body>
+</html> 

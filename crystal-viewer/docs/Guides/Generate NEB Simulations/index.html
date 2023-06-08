@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				line-height: 1.2;
+				background-color: white;
+				color: black;
+			}
+			
+			h1 {
+				color: darkblue;
+				margin-bottom: 0;
+				line-height: 1.0;
+			}
+			h1 span {
+				font-size: 24pt;
+			}
+			
+			h2 {
+				color: darkred;
+				margin-bottom: 0;
+				font-size: 18pt;
+				line-height: 1.0;
+			}
+			
+			p {
+				font-size: 12pt;
+			}
+			ul {
+				font-size: 12pt;
+			}
+			ol {
+				font-size: 12pt;
+			}
+			
+			a {
+				color: blue;
+			}
+			
+			td {
+				font-size: 12pt;
+				padding: 5px;
+			}
+			th {
+				font-size: 14pt;
+				padding: 5px;
+			}
+			
+			table.codeblock {
+				margin-bottom: 10px;
+				line-height: 1.0;
+				background-color: #DDDDDD;
+			}
+			table.codeblock tr td {
+				padding: 5px;
+				line-height: 1.0;
+				font-family: 'Courier New', monospace;
+			}
+			
+			table.info {
+				background-color: #5757E0;
+				margin-top: 10px;
+			}
+			table.info tr td {
+				background-color: #E0E0FF;
+			}
+			
+			table.warning {
+				background-color: #E05757;
+				margin-top: 10px;
+			}
+			table.warning tr td {
+				background-color: #FFE0E0;
+			}
+			
+			table.images tr td {
+				padding: 10px;
+				background-color: white;
+				border: 1px solid #DDDDDD;
+			}
+			
+			p.images {
+				line-height: 1.0;
+			}
+			
+			span.important {
+				color: red;
+			}
+			
+		</style>
+	</head>
+	<body>
+	
+	<div>
+		<h1>Generating NEB Simulations</h1><hr />
+		<p>
+			This section will guide you setting up, running, and viewing the results of an 
+			NEB simulation.  For this, the basic steps are:
+		</p>
+		<ol>
+			<li><a href="index.html#1) Import Structure">Import Structure</a></li>
+			<li><a href="index.html#2) Prepare Structure">Prepare Structure</a></li>
+			<li><a href="index.html#3) Generate Migration Paths">Generate Migration Paths</a></li>
+			<li><a href="index.html#4) Generate NEB Simulations">Generate NEB Simulations</a></li>
+			<li><a href="index.html#5) Run the NEB Simulations">Run the NEB Simulations</a></li>
+			<li><a href="index.html#6) Viewing Computed Barriers">Viewing Computed Barriers</a></li>
+		</ol>
+		<br />
+		<table align=center class="warning" width=75%>
+			<tr><td>
+				Depending on what you set the "division count" to 
+				(see <a href="../../Simulations/NEB/index.html#NEB Options">here</a>), this 
+				may schedule a <i>lot</i> of jobs (one per division)!  Make sure you are 
+				allowed to schedule that many jobs!
+			</td></tr>
+		</table><br />
+		<table align=center class="info" width=75%>
+			<tr><td>
+				<span style="font-weight: bold;">Note:</span> this is designed for running on clusters that use the
+				<a href="https://slurm.schedmd.com/">slurm</a> job scheduler, and have 
+				<a href="https://www.lammps.org/">LAMMPS</a> installed.
+			</td></tr>
+		</table><br />
+		<table align=center class="info" width=75%>
+			<tr><td>
+				<span style="font-weight: bold;">Note:</span> by this point, you should already have an annealed structure.  More
+				information on annealing structure can be found <a href="../Annealing From Scratch/index.html">here</a>.
+			</td></tr>
+		</table><br />
+	</div><br />
+	
+	<div id="1) Import Structure">
+		<h2>1) Import Structure</h2><hr />
+		<p>
+			Load your <a href="../../Basic Use/Saving and Opening Files/index.html#Structures">structure</a> into the program
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="menuStructure.png" /></p></td>
+				<td><p class="images"><img src="structureSelector.png" /></p></td>
+			</tr>
+		</table>
+		<p>
+			You should now see the structure in the viewport:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="structureLoaded.png" /></p></td>
+			</tr>
+		</table>
+	</div><br />
+		
+	<div id="2) Prepare Structure">
+		<h2>2) Prepare Structure</h2><hr />
+		<p>
+			It is <span class="important">required</span> to define a
+			<a href="../../Basic Use/Modifying Atoms/index.html#Marking As Starting Vacancy">starting vacancy</a>.  
+			To do so, use the "Mark as Starting Vacancy" tool found in the "Modify" section:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="markStartingVacancy.png" /></p></td>
+			</tr>
+		</table>
+		<p>
+			Additionally, you may wish to mark other atoms as 
+			<a href="../../Basic Use/Modifying Atoms/index.html#Mark As Vacancy">vacancies</a>, 
+			or <a href="../../Basic Use/Modifying Atoms/index.html#Dope Atoms">dope atoms</a>:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="otherMods.png" /></p></td>
+			</tr>
+		</table>
+		<p>
+			As always, more information on these tools can be found in their respective 
+			sections.
+		</p>
+	</div><br />
+	
+	<div id="3) Generate Migration Paths">
+		<h2>3) Generate Migration Paths</h2><hr />
+		<p>
+			Go to the "Migration Paths" panel on the right side:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="gotoPaths.png" /></p></td>
+			</tr>
+		</table>
+		<p>
+			Here, you can either <a href="../../Basic Use/Saving and Opening Files/index.html#Migration Paths">load the migration paths from a file</a>, 
+			or you can generate new ones using a proximity-based system.  To generate new 
+			ones, click on "From Neighbors..." to launch the "Paths From Neighbors" dialog:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="neighborsDialog.png" /></p></td>
+			</tr>
+		</table>
+		<p>
+			Enter the parameters that best fit your case.  Additionally, several filters 
+			are available to determine which paths should be generated.  A description of 
+			the fields can be found <a href="../../Advanced Use/Migration Paths/index.html#Generating Paths">here</a>.
+		</p>
+		<p>
+			Note that for large structures, it may take a few moments to generate the paths, 
+			especially if "Remove Obstructed Paths" is enabled.  Once generated, they will, 
+			be present as white arrows in the viewport:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="pathsExample.png" /></p></td>
+			</tr>
+		</table>
+	</div><br />
+	
+	<div id="4) Generate NEB Simulations">
+		<h2>4) Generate NEB Simulations</h2><hr />
+		<p>
+			Go to <code>Simulation > Generate Simulation</code> to launch the simulation 
+			generator dialog:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="gotoGenerate.png" /></p></td>
+			</tr>
+		</table>
+		<p>
+			Switch to the NEB simulation:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="clickNEB.png" /></p></td>
+			</tr>
+		</table>
+		<p>
+			Enter parameters for your simulation.  An explanation of all the fields can be 
+			found <a href="../../Simulations/NEB/index.html">here</a>.  Once ready, 
+			click "Ok" to generate.
+		</p>
+	</div><br />
+	
+	<div id="5) Run the NEB Simulations">
+		<h2>5) Run the NEB Simulations</h2><hr />
+		<p>
+			Upload the resulting files to your cluster using the method of your choice (<a href="https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/">scp</a>, <a href="https://filezilla-project.org/">FileZilla</a>, etc.)
+		</p>
+		<p>
+			To run the simulation, navigate to the directory containing your simulation files 
+			and run the command:
+		</p>
+		<table align=center class="codeblock">
+			<tr>
+				<td style="padding: 20px;">sbatch slurm-mpi-main.sh</td>
+			</tr>
+		</table>
+		<p>
+			This will run the master job scheduling script.  It will first run a 
+			pre-minimizer job if it detects one hasn't been run already.  If it detects the 
+			pre-minimizer <i>has</i> been run (meaning you've run this script before), this 
+			step will be skipped.  Generally, you will not need to worry about this 
+			preparation step.
+		</p>
+		<p>
+			The master job script will then schedule each <a href="../../Simulations/NEB/index.html#NEB Options">division</a> 
+			as a separate job.  These jobs will first wait for the pre-minimizer to finish 
+			before running themselves.
+		</p>
+		<p>
+			Depending on how many paths you're simulating, it may take some time for them to 
+			complete.  Once finished, a final compilation script will run automatically, 
+			compiling the <a href="../../Basic Use/Saving and Opening Files/index.html#Energy Barriers">energy barriers</a> into a single table found in 
+			<code>/Compiled Energy Barriers/[NAME] Barriers.csv</code>.
+		</p>
+		<p>
+			Finally, any paths that failed to run&mdash;whether due to convergence issues or 
+			the cluster having a bad day&mdash;will be logged to <code>/Missing Barriers/Missing.csv</code>.
+			This can be loaded back into the viewer as ordinary <a href="../../Basic Use/Saving and Opening Files/index.html#Migration Paths">migration paths</a>.
+		</p>
+	</div><br />
+	
+	<div id="6) Viewing Computed Barriers">
+		<h2>6) Viewing Computed Barriers</h2><hr />
+		<p>
+			Once all jobs have finished, download the completed <a href="../../Basic Use/Saving and Opening Files/index.html#Energy Barriers">barriers file</a> 
+			from <code>/Compiled Energy Barriers/[NAME] Barriers.csv</code>.
+		</p>
+		<p>
+			Then, load your structure back in.  For convenience, a template file (named 
+			<code>template.gz</code>) was automatically added to the simulation directory 
+			upon initial generation.  That way, you can restore the complete initial setup 
+			for reference.
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="template.png" /></p></td>
+			</tr>
+		</table>
+		<p>
+			Next, load the <a href="../../Basic Use/Saving and Opening Files/index.html#Energy Barriers">energy barriers</a> 
+			into the viewer using the "Migration Paths" panel.
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="pathsSelector.png" /></p></td>
+			</tr>
+		</table>
+		<p>
+			Now that your barriers are loaded in, it's possible that some of them didn't 
+			converge properly.  This could skew the energy scale into entirely unreasonable 
+			territory:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="energyBad.png" /></p></td>
+			</tr>
+		</table>
+		<p>
+			Fortunately, you can use the newly visible energy scale bar to adjust the limits 
+			of the range:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="energyGood.png" /></p></td>
+			</tr>
+		</table>
+		<p>
+			Additionally, you can toggle "Clip Energy Barriers" to hide any barrier outside 
+			the energy range.  This is found under <code>Structure > Clip Energy Barriers</code>:
+		</p>
+		<table align=center class="images">
+			<tr>
+				<td><p class="images"><img src="clipBarriers.png" /></p></td>
+			</tr>
+		</table>
+	</div><br />
+	
+	</body>
+</html> 
