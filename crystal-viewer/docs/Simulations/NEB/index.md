@@ -105,6 +105,7 @@ The remaining options directly configure the NEB process:
 
 | Field                            | Description                               |
 | -------------------------------- | ----------------------------------------- |
+| NEB Timeout                      | Maximum time, in seconds, to run an individual NEB before terminating.  Useful for preventing non-converging simulations from hogging compute time |
 | Minimizer Style                  | Minimizer style to use in the NEB's minimization process |
 | Number of Replicas               | Number of intermediate configurations (including the start and end). Note: increasing this will drastically increase the memory requirements |
 | NEB Spring Constant              | Spring constant used in the "elastic band" |

@@ -117,10 +117,11 @@ job using slurm.
 The remaining options configure the minimizer. These are identical 
 to the settings used in the regular [minimizer](../Minimizing/):
 
-| Field            | Description |
-| ---------------- | ----------- |
-| Minimizer Style  | Method to use for minimizing. More information on minimizer styles can be found [here](https://docs.lammps.org/min_style.html) |
-| Energy Tolerance | Minimizer terminates when the ratio between the energy change and energy magnitude is less than this value. Set to 0.0 to disable |
-| Force Tolerance  | Stopping tolerance for length of global force vector. Set to 0.0 to disable |
-| Max. Steps       | Maximum number of steps to run the minimizer |
-| Max. Force Calls | Maximum number of force evaluations before terminating the minimizer |
+| Field             | Description |
+| ----------------- | ----------- |
+| Minimizer Style   | Method to use for minimizing. More information on minimizer styles can be found [here](https://docs.lammps.org/min_style.html) |
+| Energy Tolerance  | Minimizer terminates when the ratio between the energy change and energy magnitude is less than this value. Set to 0.0 to disable |
+| Force Tolerance   | Stopping tolerance for length of global force vector. Set to 0.0 to disable |
+| Max. Steps        | Maximum number of steps to run the minimizer |
+| Max. Force Calls  | Maximum number of force evaluations before terminating the minimizer |
+| Minimizer Timeout | Maximum time, in seconds, to run an individual NEB before terminating.  Useful for preventing non-converging simulations from hogging compute time |

@@ -52,11 +52,11 @@ In this case:
 	<tr>
 		<td>
 			<span style="font-weight: bold;">Note:</span> If a potential coefficient file references a potential style that
-			does not exist among the <a href="../Adding Potentials/#style-builder">registered list</a>, it will be assumed to follow 
+			does not exist among the <a href="../Adding Potentials/#registered-list-info">registered list</a>, it will be assumed to follow 
 			the currently active style.  This assumption will not always work, and 
 			you will be sad.
 		</td>
 	</tr>
 </table>
-
+</div>
 
