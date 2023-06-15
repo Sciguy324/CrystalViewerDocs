@@ -1,8 +1,10 @@
 # Introduction
 
-Crystal Viewer is program I developed to assist with generating many, many NEB simulations.  
+Crystal Viewer is program developed to assist with generating many, many NEB simulations.  
 It contains tools for setting up migration paths between atoms, generating the files needed 
 for the NEB simulations, and viewing the results of said simulations.
+
+![Screenshot of the program](preview.png)
 
 ---
 
