@@ -22,5 +22,6 @@ A description of these options are as follows:
 | Sphere Frame Quality    | Number of subdivisions to use when generating sphere frame models |
 | Arrow Quality           | Number of subdivisions to use when generating arrow models        |
 | Double Arrow Quality    | Number of subdivisions to use when generating double-arrow models |
+| Show Axes               | Whether to render the coordinate axes                             |
 
 
