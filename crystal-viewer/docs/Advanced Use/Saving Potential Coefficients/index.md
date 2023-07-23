@@ -1,7 +1,7 @@
 # Saving Potential Coefficients
 
-The [simulations](../../Simulations/) offered by this generally 
-require a potential coefficients to properly define interactions 
+The [simulations](../../Simulations/) offered by this program generally 
+require potential coefficients to properly define interactions 
 between atoms. These are set from the "Generate Simulation" dialog:
 
 ![Image of dialog](dialog.png)
