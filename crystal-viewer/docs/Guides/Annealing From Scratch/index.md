@@ -9,12 +9,9 @@ scratch. For this, the basic steps are:
 4. [Generate Annealer](#4-generate-annealer)
 5. [Run the Annealer](#5-run-the-annealer)
 
-<table align=center class="info" width=75% style="border: 2px solid #5757E0; background-color: #E0E0FF;">
-	<tr><td>
-		<span style="font-weight: bold;">Note:</span> this program is not designed to <i>create</i> structures.  You must
-		already have a structure ahead of time!
-	</td></tr>
-</table><br />
+!!! note
+	This program is not designed to *create* structures.  You must
+	already have a structure ahead of time!
 
 ---
 

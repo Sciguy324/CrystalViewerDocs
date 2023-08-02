@@ -53,13 +53,10 @@ potential style. In order for this new style to be automatically
 recognized by the program, it <span style="color: red;">must</span> 
 be saved to `/assets/simulation-builders/potential-defs/`.
 
-<table id="registered-list-info" width=75% align=center class="info" style="border: 2px solid #5757E0; background-color: #E0E0FF;">
-	<tr><td>
-		<span style="font-weight: bold;">Note:</span> once a style is successfully created, it will automatically be added to
-		the internal registered list.  However, you may need to close and reopen the 
-		simulation builder dialog for it to show up in the "Potential Style" dropdown.
-	</td></tr>
-</table><br />
+!!! note
+	Once a style is successfully created, it will automatically be added to
+	the internal registered list.  However, you may need to close and reopen the 
+	simulation builder dialog for it to show up in the "Potential Style" dropdown.
 
 ---
 
@@ -76,7 +73,7 @@ potential:
 {
 	"name": "buck/coul/long (Two Atom)",
 	"resolutions": {
-	"LAMMPS": "buck/coul/long"
+		"LAMMPS": "buck/coul/long"
 	},
 	"arguments": {
 		"Atom1": {

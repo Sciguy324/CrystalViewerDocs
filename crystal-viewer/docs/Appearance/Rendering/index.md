@@ -21,7 +21,9 @@ A description of these options are as follows:
 | Sphere Quality          | Number of subdivisions to use when generating sphere models       |
 | Sphere Frame Quality    | Number of subdivisions to use when generating sphere frame models |
 | Arrow Quality           | Number of subdivisions to use when generating arrow models        |
-| Double Arrow Quality    | Number of subdivisions to use when generating double-arrow models |
+| FOV                     | Field-of-view, in degrees                                         |
+| Near Plane              | Distance to near-plane used in projections                        |
+| Far Plane               | Distance to far-plane used in projections                         |
 | Show Axes               | Whether to render the coordinate axes                             |
 
 

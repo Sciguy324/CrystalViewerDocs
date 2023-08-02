@@ -10,27 +10,20 @@ results of an NEB simulation. For this, the basic steps are:
 5. [Run the NEB Simulations](#5-run-the-neb-simulations)
 6. [Viewing Computed Barriers](#6-viewing-computed-barriers)
 
-<table align=center class="warning" width=75% style="border: 2px solid #E05757; background-color: #FFE0E0;">
-	<tr><td>
-		Depending on what you set the "division count" to 
-		(see <a href="../../Simulations/NEB/#neb-options">here</a>), this 
-		may schedule a <i>lot</i> of jobs (one per division)!  Make sure you are 
-		allowed to schedule that many jobs!
-	</td></tr>
-</table><br />
-<table align=center class="info" width=75% style="border: 2px solid #5757E0; background-color: #E0E0FF;">
-	<tr><td>
-		<span style="font-weight: bold;">Note:</span> this is designed for running on clusters that use the
-		<a href="https://slurm.schedmd.com/">slurm</a> job scheduler, and have 
-		<a href="https://www.lammps.org/">LAMMPS</a> installed.
-	</td></tr>
-</table><br />
-<table align=center class="info" width=75% style="border: 2px solid #5757E0; background-color: #E0E0FF;">
-	<tr><td>
-		<span style="font-weight: bold;">Note:</span> by this point, you should already have an annealed structure.  More
-		information on annealing structure can be found <a href="../Annealing From Scratch/">here</a>.
-	</td></tr>
-</table><br />
+!!! danger
+	Depending on what you set the "division count" to 
+	(see [here](../../Simulations/NEB/#neb-options)), this 
+	may schedule a *lot* of jobs (one per division)!  Make sure you are 
+	allowed to schedule that many jobs!
+
+!!! note
+	This is designed for running on clusters that use the
+	[slurm](https://slurm.schedmd.com/) job scheduler, and have 
+	[LAMMPS](https://www.lammps.org/) installed.
+
+!!! note
+	By this point, you should already have an annealed structure.  More
+	information on annealing structure can be found [here](../Annealing From Scratch/).
 
 ---
 

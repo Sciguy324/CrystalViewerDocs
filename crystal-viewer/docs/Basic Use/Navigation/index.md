@@ -30,6 +30,7 @@ to `Settings > Viewport Navigation` under the menu bar:
 ![First person mode menu bar button](firstPersonMode.png)
 
 Under first-person mode, the controls are:
+
 | Input | Action |
 | ----- | ------ |
 | Move Mouse       | Rotate view (must have the viewport in-focus) |                             |

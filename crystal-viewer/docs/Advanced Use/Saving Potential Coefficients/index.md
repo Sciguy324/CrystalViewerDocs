@@ -48,15 +48,8 @@ In this case:
   A=0.00, ρ=0.01, and C=0.00.
 * Et cetera
 
-<table align=center width=75% style="border: 2px solid #E05757; background-color: #FFE0E0;">
-	<tr>
-		<td>
-			<span style="font-weight: bold;">Note:</span> If a potential coefficient file references a potential style that
-			does not exist among the <a href="../Adding Potentials/#registered-list-info">registered list</a>, it will be assumed to follow 
-			the currently active style.  This assumption will not always work, and 
-			you will be sad.
-		</td>
-	</tr>
-</table>
-</div>
-
+!!! danger "Note:"
+	If a potential coefficient file references a potential style that 
+	does not exist among the [registered list](../Adding Potentials/#registered-list-info), 
+	it will be assumed to follow the currently active style.  This assumption will not 
+	always work, and you will be sad.

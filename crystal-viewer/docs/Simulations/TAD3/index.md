@@ -11,15 +11,10 @@ It is accessible in the **"LAMMPS - TAD3"** tab of the
 
 ![Minimizer tab of the simulation builder dialog](overview.png)
 
-<table align=center class="warning" style="border: 2px solid #E05757; background-color: #FFE0E0;">
-	<tr>
-		<td width=75%>
-			<span style="font-weight: bold;">Note:</span> This simulation does <i>not</i> use LAMMPS or slurm.  Instead, it
-			requires the TAD3 simulator to be compiled and installed on your machine. 
-			A fork of it is available <a href="https://github.com/lanl/spectad">here</a>.
-		</td>
-	</tr>
-</table>
+!!! danger "Note:"
+	This simulation does *not* use LAMMPS or slurm.  Instead, it
+	requires the TAD3 simulator to be compiled and installed on your machine. 
+	A fork of it is available [here](https://github.com/lanl/spectad).
 
 ---
 

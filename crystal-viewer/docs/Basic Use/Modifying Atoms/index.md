@@ -12,7 +12,7 @@ Additionally, there are a handful of different schema for applying these modific
 * Pick atom
 * [From selected atoms](#modifying-from-selection)
 * [From a random population](#modifying-a-random-population)
-* [From an atom list file](#modify-from-csv-file)
+* [From an atom list file](#modify-from-file)
 
 To enter modification mode, simply click the "Modify Atoms" button below the viewport. 
 Alternatively, pressing any of the "Modify" buttons will automatically enter modification 
@@ -118,11 +118,12 @@ The next set of options provide additional filters for choosing which atoms are 
 
 ---
 
-## Modify From CSV File
+## Modify From File
 
 A list of atom ids are loaded in from the chosen file. Any atom within this list 
-will be affected by the current modification.
+will be immediately affected by the current modification.  Currently supported 
+file formats are `.csv` and [GROMACS-style](https://manual.gromacs.org/archive/5.0.4/online/ndx.html) `.ndx`.
 
 It is located with the rest of the modification tools.
 
-![Modify from CSV file button](modifyFromFile.png)
+![Modify from file button](modifyFromFile.png)

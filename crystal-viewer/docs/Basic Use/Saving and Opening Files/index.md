@@ -69,6 +69,14 @@ or the "Select Atoms From File" box:
 
 ![Load atom list from menu bar](menuAtomList.png) ![Load atom list button](atomListSelector.png)
 
+The following file formats are supported:
+
+| Format | Description |
+| ------ | ----------- |
+| .csv   | Comma-separated list of atom ids |
+| .tsv   | Space-separated list of atom ids |
+| .ndx   | [GROMACS-style](https://manual.gromacs.org/archive/5.0.4/online/ndx.html) index file |
+
 ---
 
 ## Migration Paths
