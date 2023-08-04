@@ -363,7 +363,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#modify-from-csv-file" class="nav-link">Modify From CSV File</a>
+            <li class="nav-item" data-level="2"><a href="#modify-from-file" class="nav-link">Modify From File</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -387,7 +387,7 @@ This includes actions such as:</p>
 <li>Pick atom</li>
 <li><a href="#modifying-from-selection">From selected atoms</a></li>
 <li><a href="#modifying-a-random-population">From a random population</a></li>
-<li><a href="#modify-from-csv-file">From an atom list file</a></li>
+<li><a href="#modify-from-file">From an atom list file</a></li>
 </ul>
 <p>To enter modification mode, simply click the "Modify Atoms" button below the viewport. 
 Alternatively, pressing any of the "Modify" buttons will automatically enter modification 
@@ -487,11 +487,12 @@ containing various options for how to apply the sampling:</p>
 </tbody>
 </table>
 <hr />
-<h2 id="modify-from-csv-file">Modify From CSV File</h2>
+<h2 id="modify-from-file">Modify From File</h2>
 <p>A list of atom ids are loaded in from the chosen file. Any atom within this list 
-will be affected by the current modification.</p>
+will be immediately affected by the current modification.  Currently supported 
+file formats are <code>.csv</code> and <a href="https://manual.gromacs.org/archive/5.0.4/online/ndx.html">GROMACS-style</a> <code>.ndx</code>.</p>
 <p>It is located with the rest of the modification tools.</p>
-<p><img alt="Modify from CSV file button" src="modifyFromFile.png" /></p></div>
+<p><img alt="Modify from file button" src="modifyFromFile.png" /></p></div>
             </div>
         </div>
 

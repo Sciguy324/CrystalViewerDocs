@@ -390,13 +390,12 @@ that matches the aforementioned specified type.</p>
 potential style. In order for this new style to be automatically 
 recognized by the program, it <span style="color: red;">must</span> 
 be saved to <code>/assets/simulation-builders/potential-defs/</code>.</p>
-<table id="registered-list-info" width=75% align=center class="info" style="border: 2px solid #5757E0; background-color: #E0E0FF;">
-    <tr><td>
-        <span style="font-weight: bold;">Note:</span> once a style is successfully created, it will automatically be added to
-        the internal registered list.  However, you may need to close and reopen the 
-        simulation builder dialog for it to show up in the "Potential Style" dropdown.
-    </td></tr>
-</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Once a style is successfully created, it will automatically be added to
+the internal registered list.  However, you may need to close and reopen the 
+simulation builder dialog for it to show up in the "Potential Style" dropdown.</p>
+</div>
 <hr />
 <h2 id="file-format">File Format</h2>
 <p>Potential definitions are saved as a human-readable <code>.json</code> file. 
@@ -407,7 +406,7 @@ potential:</p>
 <pre><code class="language-json">{
     &quot;name&quot;: &quot;buck/coul/long (Two Atom)&quot;,
     &quot;resolutions&quot;: {
-    &quot;LAMMPS&quot;: &quot;buck/coul/long&quot;
+        &quot;LAMMPS&quot;: &quot;buck/coul/long&quot;
     },
     &quot;arguments&quot;: {
         &quot;Atom1&quot;: {
@@ -432,8 +431,7 @@ potential:</p>
         }
     }
 }
-</code></pre>
-<p><br /></p></div>
+</code></pre></div>
             </div>
         </div>
 

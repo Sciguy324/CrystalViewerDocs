@@ -376,12 +376,11 @@ scratch. For this, the basic steps are:</p>
 <li><a href="#4-generate-annealer">Generate Annealer</a></li>
 <li><a href="#5-run-the-annealer">Run the Annealer</a></li>
 </ol>
-<table align=center class="info" width=75% style="border: 2px solid #5757E0; background-color: #E0E0FF;">
-    <tr><td>
-        <span style="font-weight: bold;">Note:</span> this program is not designed to <i>create</i> structures.  You must
-        already have a structure ahead of time!
-    </td></tr>
-</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This program is not designed to <em>create</em> structures.  You must
+already have a structure ahead of time!</p>
+</div>
 <hr />
 <h2 id="1-import-structure">1) Import Structure</h2>
 <p>Load your <a href="../../Basic Use/Saving and Opening Files/#structure-files">structure</a> into the program:</p>
@@ -438,8 +437,7 @@ simulation files and run the command:</p>
 <pre><code class="language-shell">sbatch slurm-mpi-main.sh
 </code></pre>
 <p>The annealer may require some time to run. Once it's finished, you 
-can retrieve the resulting structure from <code>/logs/[NAME]-anneal.dat</code></p>
-<p><br /></p></div>
+can retrieve the resulting structure from <code>/logs/[NAME]-anneal.dat</code></p></div>
             </div>
         </div>
 
